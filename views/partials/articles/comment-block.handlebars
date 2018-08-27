@@ -1,0 +1,46 @@
+<li>
+  <div class="collapsible-header grey lighten-3 hoverable">Comments</div>
+  <div class="collapsible-body comments">
+    <ul class="collection">
+      <li class="collection-item grey lighten-5">
+        <div class="row">
+          <div class="col s12">
+            <h4 class="center">Post a comment!</h4>
+            <form data-id={{_id}}>
+              <div class="input-field">
+                <input id="name_{{_id}}" name="name" type="tel" class="validate">
+                <label for="name_{{_id}}">Name</label>
+              </div>
+              <div class="input-field">
+                <textarea id="comment_{{_id}}" class="materialize-textarea validate" name="comment"></textarea>
+                <label for="comment_{{_id}}">Comment</label>
+              </div>
+              <div class="center">
+                <button class="waves-effect waves-light green btn-large hoverable" type="submit">
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </li>
+      <div class="commentsSection" data-id={{_id}}>
+      {{#each comments}}
+      <li class="collection-item">
+        <div class="row">
+          <div class="col l10 m8 s12">
+            <p><b>{{name}}</b></p>
+            <p>{{comment}}</p>
+          </div>
+          <div class="col l2 m4 s12">
+            <p class="center">
+              <a class="deleteBtn waves-effect waves-light red btn-large hoverable" data-article_id={{../_id}} data-comment_id={{_id}}>DELETE</a>
+            </p>
+          </div>
+        </div>
+      </li>
+      {{/each}}
+      </div>
+    </ul>
+  </div>
+</li>

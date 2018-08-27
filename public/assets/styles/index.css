@@ -1,0 +1,13 @@
+body{
+  background-color: #e3f2fd;
+}
+
+.comments
+{
+  margin: 0;
+  padding: 0;
+}
+
+.addMargin{
+  margin-left: 10px;
+}
