@@ -28,6 +28,7 @@ require("./routes/htmlRoutes")(app);
 //db connection
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost:27017/mongoHeadlines";
 
+mongoose.Promise = Promise;
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
 app.listen(3000, function () {
