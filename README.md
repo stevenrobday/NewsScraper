@@ -1,3 +1,3 @@
 # NewsScraper
 
-Scrape, bookmark, and comment on kotaku articles!
+Scrape, bookmark, and comment on Kotaku articles!
